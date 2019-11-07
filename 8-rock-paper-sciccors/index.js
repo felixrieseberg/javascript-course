@@ -41,9 +41,14 @@ function compete(a, b) {
   }
 
   // We did not get the right input
-  throw new Error('Inputs ' + a + ' and ' + b + ' not recognized');
+  throw new Error(`Inputs ${a} and ${b} not recognized`);
 }
 
+/**
+ * Returns a random hand, either "rock", "paper", or "scissors"
+ *
+ * @returns {string}
+ */
 function getRandomHand() {
   // A random number, either 0, 1, or 2.
   // Math.floor() returns the largest integer less than or equal to a given number.
@@ -57,7 +62,7 @@ function getRandomHand() {
 // Let's play!
 const userHand = process.argv[2];
 const computerHand = getRandomHand();
-const computerPlayed = 'Computer played "' + computerHand + '". ';
+const computerPlayed = `Computer played "${computerHand}". `;
 const result = compete(userHand, computerHand);
 
 if (result === 0) {

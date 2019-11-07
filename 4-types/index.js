@@ -4,6 +4,6 @@ const myObject = {
   c: undefined,
   d: null,
   e: true,
-};
+}
 
 console.log(myObject);
